@@ -213,6 +213,7 @@ clean:
 	$(Q) make -C espfs/mkespfsimage/ clean
 	$(Q) rm -rf $(FW_BASE)
 	$(Q) rm -f webpages.espfs libwebpages-espfs.a
+	$(Q) find $(BUILD_BASE) -type f | xargs rm -f
 ifeq ("$(COMPRESS_W_YUI)","yes")
 	$(Q) rm -rf html_compressed
 endif
